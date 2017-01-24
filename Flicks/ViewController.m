@@ -67,13 +67,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog([NSString stringWithFormat:@"%ld", indexPath.row]);
+    [self showMovie:indexPath];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog([NSString stringWithFormat:@"%ld", indexPath.row]);
+    [self showMovie:indexPath];
 }
 
+- (void)showMovie:(NSIndexPath *) indexPath{
+    NSLog([NSString stringWithFormat:@"%ld", indexPath.row]);
+}
 
 
 - (void) fetchMovies:(id)sender{
