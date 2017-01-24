@@ -42,6 +42,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [self onValueChanged:_segmentedControl];
+
     self.movieTableView.dataSource = self;
     self.collectionView.dataSource = self;
 
