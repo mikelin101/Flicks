@@ -12,7 +12,7 @@
 #import "MovieModel.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
-@interface ViewController () <UITableViewDataSource, UICollectionViewDataSource>
+@interface ViewController () <UITableViewDataSource, UICollectionViewDataSource, UITableViewDelegate, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSArray<MovieModel *> *movies;
@@ -44,12 +44,38 @@
     [self onValueChanged:_segmentedControl];
 
     self.movieTableView.dataSource = self;
+    self.movieTableView.delegate = self;
+    
     self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
 
-    [self fetchMovies];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+
+    UIRefreshControl *refreshControl2 = [[UIRefreshControl alloc]init];
+    [refreshControl2 addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+
+    [self.movieTableView insertSubview:refreshControl atIndex:0];
+    [self.collectionView insertSubview:refreshControl2 atIndex:0];
+    
+    [self fetchMovies:nil];
 }
 
-- (void) fetchMovies {
+- (void) refresh:(id) sender {
+    [self fetchMovies:sender];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog([NSString stringWithFormat:@"%ld", indexPath.row]);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog([NSString stringWithFormat:@"%ld", indexPath.row]);
+}
+
+
+
+- (void) fetchMovies:(id)sender{
     NSString *apiKey = @"a07e22bc18f5cb106bfe4cc1f83ad8ed";
 
     NSString *urlBase;
@@ -74,20 +100,25 @@
                                             completionHandler:^(NSData * _Nullable data,
                                                                 NSURLResponse * _Nullable response,
                                                                 NSError * _Nullable error) {
+                                                if (sender) {
+                                                    NSLog(@"DONE");
+                                                    [sender endRefreshing];
+                                                }
+
                                                 if (!error) {
                                                     NSError *jsonError = nil;
                                                     NSDictionary *responseDictionary =
                                                     [NSJSONSerialization JSONObjectWithData:data
                                                                                     options:kNilOptions
                                                                                       error:&jsonError];
-                                                    NSLog(@"Response: %@", responseDictionary);
+//                                                    NSLog(@"Response: %@", responseDictionary);
                                                     
                                                     NSArray *results = responseDictionary[@"results"];
                                                     NSMutableArray *models = [NSMutableArray array];
                                                 
                                                     for (NSDictionary *result in results) {
                                                         MovieModel *model = [[MovieModel alloc] initWithDictionary:result];
-                                                        NSLog(@"Model - %@", model);
+//                                                        NSLog(@"Model - %@", model);
                                                         
                                                         [models addObject:model];
                                                     }
@@ -95,7 +126,15 @@
                                                     [self.movieTableView reloadData];
                                                     [self.collectionView reloadData];
                                                 } else {
-                                                    NSLog(@"An error occurred: %@", error.description);
+                                                    NSLog(error.description);
+                                                    
+                                                    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                                                    
+                                                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"There was a network error" preferredStyle:UIAlertControllerStyleAlert];
+                                                    
+                                                    [alert addAction:defaultAction];
+                                                    
+                                                    [self presentViewController:alert animated:false completion:nil];
                                                 }
                                             }];
     [task resume];
