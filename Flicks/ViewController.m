@@ -11,6 +11,7 @@
 #import "GridCell.h"
 #import "MovieModel.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface ViewController () <UITableViewDataSource, UICollectionViewDataSource, UITableViewDelegate, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
@@ -76,6 +77,8 @@
 
 
 - (void) fetchMovies:(id)sender{
+    [MBProgressHUD showHUDAddedTo:self.view animated:false];
+    
     NSString *apiKey = @"a07e22bc18f5cb106bfe4cc1f83ad8ed";
 
     NSString *urlBase;
@@ -100,6 +103,7 @@
                                             completionHandler:^(NSData * _Nullable data,
                                                                 NSURLResponse * _Nullable response,
                                                                 NSError * _Nullable error) {
+                                                [MBProgressHUD hideHUDForView:self.view animated:false];
                                                 if (sender) {
                                                     NSLog(@"DONE");
                                                     [sender endRefreshing];
