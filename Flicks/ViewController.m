@@ -22,14 +22,22 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.movieTableView.dataSource = self;
-    
+
     [self fetchMovies];
 }
 
 - (void) fetchMovies {
     NSString *apiKey = @"a07e22bc18f5cb106bfe4cc1f83ad8ed";
+
+    NSString *urlBase;
+    if([self.restorationIdentifier isEqualToString:@"top_rated"]) {
+        urlBase = @"https://api.themoviedb.org/3/movie/top_rated?api_key=";
+    } else {
+        urlBase = @"https://api.themoviedb.org/3/movie/now_playing?api_key=";
+    }
+    
     NSString *urlString =
-    [@"https://api.themoviedb.org/3/movie/now_playing?api_key=" stringByAppendingString:apiKey];
+    [urlBase stringByAppendingString:apiKey];
     
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];

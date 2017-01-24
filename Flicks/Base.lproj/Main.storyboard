@@ -8,7 +8,7 @@
         <!--Now Playing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Now Playing" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="now_playing" title="Now Playing" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -68,19 +68,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="irq-7V-0YF"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" id="irq-7V-0YF"/>
                     <connections>
                         <outlet property="movieTableView" destination="STM-ds-YV9" id="yCO-kp-caP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="342"/>
+            <point key="canvasLocation" x="1071" y="342"/>
         </scene>
         <!--Top Rated-->
         <scene sceneID="SvG-Va-u3G">
             <objects>
-                <viewController title="Top Rated" id="gCr-pl-Qaw" customClass="ViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="top_rated" title="Top Rated" id="gCr-pl-Qaw" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r5Q-rp-IEr"/>
                         <viewControllerLayoutGuide type="bottom" id="Awt-SE-vkp"/>
@@ -140,14 +140,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="2xB-6Y-Mpv"/>
+                    <tabBarItem key="tabBarItem" title="Top Rated" id="2xB-6Y-Mpv"/>
                     <connections>
                         <outlet property="movieTableView" destination="ejI-Ig-adi" id="k8T-LD-cRh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbe-Br-u9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="589" y="1246"/>
+            <point key="canvasLocation" x="379" y="1080"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EUq-6p-GCX">
