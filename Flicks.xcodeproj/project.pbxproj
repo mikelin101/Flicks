@@ -18,6 +18,8 @@
 		253FB3681E3692F800700A9C /* YahooIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 253FB3671E3692F800700A9C /* YahooIcon.png */; };
 		253FB36B1E36AEDF00700A9C /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 253FB36A1E36AEDF00700A9C /* MovieModel.m */; };
 		253FB36E1E36BC3F00700A9C /* MovieFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 253FB36D1E36BC3F00700A9C /* MovieFetcher.m */; };
+		25D386701E37D1B500963BBB /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D3866F1E37D1B500963BBB /* MovieDetailsViewController.m */; };
+		25D386731E37DF4D00963BBB /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D386721E37DF4D00963BBB /* GridCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,10 @@
 		253FB36A1E36AEDF00700A9C /* MovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieModel.m; sourceTree = "<group>"; };
 		253FB36C1E36BC3F00700A9C /* MovieFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieFetcher.h; sourceTree = "<group>"; };
 		253FB36D1E36BC3F00700A9C /* MovieFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieFetcher.m; sourceTree = "<group>"; };
+		25D3866E1E37D1B500963BBB /* MovieDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailsViewController.h; sourceTree = "<group>"; };
+		25D3866F1E37D1B500963BBB /* MovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsViewController.m; sourceTree = "<group>"; };
+		25D386711E37DF4D00963BBB /* GridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCell.h; sourceTree = "<group>"; };
+		25D386721E37DF4D00963BBB /* GridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCell.m; sourceTree = "<group>"; };
 		327B21DE8503C9ED8C03E045 /* Pods-Flicks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +98,10 @@
 				253FB36A1E36AEDF00700A9C /* MovieModel.m */,
 				253FB36C1E36BC3F00700A9C /* MovieFetcher.h */,
 				253FB36D1E36BC3F00700A9C /* MovieFetcher.m */,
+				25D3866E1E37D1B500963BBB /* MovieDetailsViewController.h */,
+				25D3866F1E37D1B500963BBB /* MovieDetailsViewController.m */,
+				25D386711E37DF4D00963BBB /* GridCell.h */,
+				25D386721E37DF4D00963BBB /* GridCell.m */,
 			);
 			path = Flicks;
 			sourceTree = "<group>";
@@ -246,6 +256,8 @@
 				253FB36E1E36BC3F00700A9C /* MovieFetcher.m in Sources */,
 				253FB3501E3683F100700A9C /* ViewController.m in Sources */,
 				253FB34D1E3683F100700A9C /* AppDelegate.m in Sources */,
+				25D386731E37DF4D00963BBB /* GridCell.m in Sources */,
+				25D386701E37D1B500963BBB /* MovieDetailsViewController.m in Sources */,
 				253FB3661E368C5200700A9C /* MovieCell.m in Sources */,
 				253FB36B1E36AEDF00700A9C /* MovieModel.m in Sources */,
 				253FB34A1E3683F100700A9C /* main.m in Sources */,
@@ -401,6 +413,7 @@
 				253FB35E1E3683F100700A9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

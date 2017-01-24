@@ -8,20 +8,42 @@
 
 #import "ViewController.h"
 #import "MovieCell.h"
+#import "GridCell.h"
 #import "MovieModel.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSArray<MovieModel *> *movies;
 @end
 
 @implementation ViewController
 
+- (IBAction)onValueChanged:(UISegmentedControl *)sender {
+    switch(sender.selectedSegmentIndex) {
+        case 0:
+            NSLog(@"list");
+            _collectionView.hidden = true;
+            _movieTableView.hidden = false;
+            break;
+        case 1:
+            NSLog(@"grid");
+            _movieTableView.hidden = true;
+            _collectionView.hidden = false;
+            break;
+        default:
+            break;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    [self onValueChanged:_segmentedControl];
     self.movieTableView.dataSource = self;
+    self.collectionView.dataSource = self;
 
     [self fetchMovies];
 }
@@ -70,6 +92,7 @@
                                                     }
                                                     self.movies = models;
                                                     [self.movieTableView reloadData];
+                                                    [self.collectionView reloadData];
                                                 } else {
                                                     NSLog(@"An error occurred: %@", error.description);
                                                 }
@@ -101,6 +124,23 @@
     [cell.posterImage setImageWithURL:model.posterURL];
     
     NSLog(@"row number= %ld", indexPath.row);
+    return cell;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.movies.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"%ld", indexPath.row);
+    
+    GridCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"movieCell" forIndexPath:indexPath];
+    
+    MovieModel *model = [self.movies objectAtIndex:indexPath.row];
+    cell.title.text = model.title;
+    [cell.posterImage setImageWithURL:model.posterURL];
+
     return cell;
 }
 
