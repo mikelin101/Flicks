@@ -7,7 +7,12 @@
 //
 
 #import "MovieDetailsController.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @implementation MovieDetailsController
 
+-(void)viewDidLoad {
+    [self.posterImage setImageWithURL:self.movieModel.posterURL];
+    self.descriptionLabel.text = self.movieModel.movieDescription;
+}
 @end

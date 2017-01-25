@@ -138,9 +138,24 @@
                     <view key="view" contentMode="scaleToFill" id="Shv-yc-axW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-Sa-ST2">
+                                <rect key="frame" x="180" y="72" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7t-Ht-W4K">
+                                <rect key="frame" x="123" y="282" width="354" height="190"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="pF3-WB-yRo"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="P7t-Ht-W4K" id="hZf-Fu-Dkw"/>
+                        <outlet property="posterImage" destination="KAj-Sa-ST2" id="zLP-C5-XrB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WvU-aY-Van" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

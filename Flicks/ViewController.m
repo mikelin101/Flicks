@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MovieCell.h"
 #import "GridCell.h"
+#import "MovieDetailsController.h"
 #import "MovieModel.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import <MBProgressHUD/MBProgressHUD.h>
@@ -133,7 +134,7 @@
                                                     [self.movieTableView reloadData];
                                                     [self.collectionView reloadData];
                                                 } else {
-                                                    NSLog(error.description);
+                                                    NSLog(@"%@", error.description);
                                                     
                                                     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
                                                     
@@ -189,6 +190,20 @@
     [cell.posterImage setImageWithURL:model.posterURL];
 
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    MovieDetailsController *movieDetailsController = [segue destinationViewController];
+    
+    // this is pretty ghetto
+    
+    NSIndexPath *indexPath;
+    @try { indexPath = [self.collectionView indexPathForCell:sender];}
+    @catch (NSException *exception) {
+        indexPath = [self.movieTableView indexPathForCell:sender];
+    }
+    
+    movieDetailsController.movieModel = [self.movies objectAtIndex:indexPath.row];
 }
 
 @end
