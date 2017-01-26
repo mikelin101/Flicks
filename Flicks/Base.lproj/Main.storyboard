@@ -103,8 +103,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lV2-t4-Fxs">
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y6X-vG-iIh">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="h4I-77-LJr">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="lV2-t4-Fxs">
                                 <rect key="frame" x="20" y="72" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="List"/>
                                     <segment title="Grid"/>
@@ -113,10 +119,8 @@
                                     <action selector="onValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="9qY-ip-E4A"/>
                                 </connections>
                             </segmentedControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="y6X-vG-iIh"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="ETd-Ql-zde" id="8C1-bQ-jgU"/>
                         <outlet property="movieTableView" destination="STM-ds-YV9" id="yCO-kp-caP"/>
@@ -281,8 +285,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z9b-hg-cId">
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XTS-gB-ck2">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="sIJ-lb-iG2">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="z9b-hg-cId">
                                 <rect key="frame" x="20" y="72" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="List"/>
                                     <segment title="Grid"/>
@@ -292,10 +302,8 @@
                                     <action selector="onValueChanged:" destination="gCr-pl-Qaw" eventType="valueChanged" id="khx-Ut-rSA"/>
                                 </connections>
                             </segmentedControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="XTS-gB-ck2"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="hFF-Gi-Ivf" id="zGJ-I8-d8V"/>
                         <outlet property="movieTableView" destination="ejI-Ig-adi" id="k8T-LD-cRh"/>
@@ -364,6 +372,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gfx-HM-Wd6"/>
+        <segue reference="lig-0f-CF1"/>
     </inferredMetricsTieBreakers>
 </document>
