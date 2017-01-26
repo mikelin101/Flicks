@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *releaseDate;
 @property (weak, nonatomic) IBOutlet UILabel *runtime;
 @property (weak, nonatomic) IBOutlet UILabel *rating;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

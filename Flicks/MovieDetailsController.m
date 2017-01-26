@@ -15,6 +15,7 @@
 -(void)viewDidLoad {
     [self.posterImage setImageWithURL:self.movieModel.posterURL];
     self.descriptionLabel.text = self.movieModel.movieDescription;
+    self.titleLabel.text = self.movieModel.title;
     NSLog(@"%d", self.movieModel.movieId);
     [self fetchMovies:nil];
 }
