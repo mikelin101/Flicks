@@ -12,6 +12,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)otherDictionary;
 
+@property (nonatomic, assign) NSInteger movieId;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *movieDescription;
 @property (nonatomic, strong) NSURL *posterURL;

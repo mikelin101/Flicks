@@ -15,6 +15,7 @@
     if (self) {
         self.title = dictionary[@"original_title"];
         self.movieDescription = dictionary[@"overview"];
+        self.movieId = [dictionary[@"id"] intValue];
         NSString *urlString = [NSString stringWithFormat:@"https://image.tmdb.org/t/p/w342%@", dictionary[@"poster_path"]];
         self.posterURL = [NSURL URLWithString:urlString];
     }

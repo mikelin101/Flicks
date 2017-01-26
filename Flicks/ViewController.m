@@ -68,17 +68,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self showMovie:indexPath];
+// TODO unselect row
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self showMovie:indexPath];
+// TODO: unselect row
 }
-
-- (void)showMovie:(NSIndexPath *) indexPath{
-    NSLog([NSString stringWithFormat:@"%ld", indexPath.row]);
-}
-
 
 - (void) fetchMovies:(id)sender{
     [MBProgressHUD showHUDAddedTo:self.view animated:false];

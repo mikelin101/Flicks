@@ -17,7 +17,6 @@
 		253FB3661E368C5200700A9C /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 253FB3651E368C5200700A9C /* MovieCell.m */; };
 		253FB3681E3692F800700A9C /* YahooIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 253FB3671E3692F800700A9C /* YahooIcon.png */; };
 		253FB36B1E36AEDF00700A9C /* MovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 253FB36A1E36AEDF00700A9C /* MovieModel.m */; };
-		253FB36E1E36BC3F00700A9C /* MovieFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 253FB36D1E36BC3F00700A9C /* MovieFetcher.m */; };
 		25B3009C1E39531A003CB0D4 /* MovieDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B3009B1E39531A003CB0D4 /* MovieDetailsController.m */; };
 		25D386731E37DF4D00963BBB /* GridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D386721E37DF4D00963BBB /* GridCell.m */; };
 /* End PBXBuildFile section */
@@ -40,8 +39,6 @@
 		253FB3671E3692F800700A9C /* YahooIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YahooIcon.png; sourceTree = "<group>"; };
 		253FB3691E36AEDF00700A9C /* MovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieModel.h; sourceTree = "<group>"; };
 		253FB36A1E36AEDF00700A9C /* MovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieModel.m; sourceTree = "<group>"; };
-		253FB36C1E36BC3F00700A9C /* MovieFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieFetcher.h; sourceTree = "<group>"; };
-		253FB36D1E36BC3F00700A9C /* MovieFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieFetcher.m; sourceTree = "<group>"; };
 		25B3009A1E39531A003CB0D4 /* MovieDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailsController.h; sourceTree = "<group>"; };
 		25B3009B1E39531A003CB0D4 /* MovieDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsController.m; sourceTree = "<group>"; };
 		25D386711E37DF4D00963BBB /* GridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCell.h; sourceTree = "<group>"; };
@@ -96,8 +93,6 @@
 				253FB3651E368C5200700A9C /* MovieCell.m */,
 				253FB3691E36AEDF00700A9C /* MovieModel.h */,
 				253FB36A1E36AEDF00700A9C /* MovieModel.m */,
-				253FB36C1E36BC3F00700A9C /* MovieFetcher.h */,
-				253FB36D1E36BC3F00700A9C /* MovieFetcher.m */,
 				25D386711E37DF4D00963BBB /* GridCell.h */,
 				25D386721E37DF4D00963BBB /* GridCell.m */,
 				25B3009A1E39531A003CB0D4 /* MovieDetailsController.h */,
@@ -253,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253FB36E1E36BC3F00700A9C /* MovieFetcher.m in Sources */,
 				253FB3501E3683F100700A9C /* ViewController.m in Sources */,
 				253FB34D1E3683F100700A9C /* AppDelegate.m in Sources */,
 				25D386731E37DF4D00963BBB /* GridCell.m in Sources */,

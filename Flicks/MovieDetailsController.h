@@ -13,5 +13,8 @@
 @property(strong, nonatomic) MovieModel *movieModel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *posterImage;
+@property (weak, nonatomic) IBOutlet UILabel *releaseDate;
+@property (weak, nonatomic) IBOutlet UILabel *runtime;
+@property (weak, nonatomic) IBOutlet UILabel *rating;
 
 @end
