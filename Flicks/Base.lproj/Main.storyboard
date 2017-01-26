@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="204" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="STM-ds-YV9">
-                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="204" sectionHeaderHeight="5" sectionFooterHeight="5" translatesAutoresizingMaskIntoConstraints="NO" id="STM-ds-YV9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="750"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="204" id="LBI-Ng-ygv" customClass="MovieCell">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="204"/>
+                                        <rect key="frame" x="0.0" y="69" width="600" height="204"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LBI-Ng-ygv" id="4uE-5D-zw1">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="203.5"/>
@@ -67,7 +67,7 @@
                                 </variation>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ETd-Ql-zde">
-                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SyM-lx-ULB">
                                     <size key="itemSize" width="152" height="136"/>
@@ -102,14 +102,17 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="600" height="780"/>
+                                </variation>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="y6X-vG-iIh">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="h4I-77-LJr">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="lV2-t4-Fxs">
-                                <rect key="frame" x="20" y="72" width="121" height="29"/>
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="lV2-t4-Fxs">
+                                <rect key="frame" x="459" y="8" width="121" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="List"/>
@@ -129,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-395" y="1958"/>
+            <point key="canvasLocation" x="-395" y="1957"/>
         </scene>
         <!--Movie Details Controller-->
         <scene sceneID="sfV-37-o79">
@@ -290,7 +293,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XTS-gB-ck2">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="sIJ-lb-iG2">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="z9b-hg-cId">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="z9b-hg-cId">
                                 <rect key="frame" x="20" y="72" width="121" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
